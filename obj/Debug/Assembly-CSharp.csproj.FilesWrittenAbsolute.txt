@@ -1,0 +1,17 @@
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/UnityEngine.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/UnityEditor.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Mono.Cecil.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Unity.DataContract.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/ShuyaInada/zipper2/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/ShuyaInada/zipper2/obj/Debug/Assembly-CSharp.dll
+/Users/ShuyaInada/zipper2/obj/Debug/Assembly-CSharp.dll.mdb
