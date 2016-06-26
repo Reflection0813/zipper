@@ -16,23 +16,22 @@ public class foodScript : MonoBehaviour {
 	// 物にさわった時に呼ばれる
 	void OnCollisionEnter(Collision col) {
 		// もしPlayerにさわったら
-		if (col.gameObject.tag == "Zipper") {
-			print ("aaaa");
-			col.collider.SendMessage ("beFat");
-			//col.SendMessage ("beFat"); //ダメージを与えて
-			Destroy (this.gameObject);
-		}
+
 
 		if (col.gameObject.tag == "terrain") {
-			Destroy (this.gameObject);
+			Debug.Log ("地面");
+			//Destroy (this.gameObject);
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Zipper") {
-			col.SendMessage ("beFat");
-			Destroy (this.gameObject,1);
+			col.GetComponent<Collider>().SendMessage ("beFat");
+			Destroy (this.gameObject);
 		}
 
+
 	}
+
+
 }

@@ -1,0 +1,17 @@
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/ShuyaInada/zipper/obj/Debug/Assembly-CSharp-firstpass.dll
+/Users/ShuyaInada/zipper/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/ShuyaInada/zipper/Temp/bin/Debug/UnityEngine.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/UnityEditor.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.DataContract.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.Mdb.dll
