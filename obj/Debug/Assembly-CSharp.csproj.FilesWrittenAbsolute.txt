@@ -34,3 +34,4 @@
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-UnityScript-firstpass.dll

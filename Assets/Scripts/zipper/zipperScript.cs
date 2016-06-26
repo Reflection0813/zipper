@@ -4,22 +4,21 @@ using System.Collections;
 
 public class zipperScript : MonoBehaviour {
 	//Zipper identity
-	private float HP = 3;
+	private float HP = 10;
 	private bool beDead;
 
 
 	//Script
 	zipperCountScript zipperCountScript;
+	public PlayerScript playerScript;
 
 	//Agent関係
 	private float INF = 100000;
-	public GameObject player;
-	public GameObject player_follower;
-	public GameObject[] enemies;
+	private GameObject player_follower;
+	private GameObject[] enemies;
 	private float agentToEnemyDistance;
 	private float minDistanceToTarget;
 	private int id;
-
 	NavMeshAgent agent;
 	private enum State
 	{
@@ -30,10 +29,18 @@ public class zipperScript : MonoBehaviour {
 	private State state;
 	private bool isTamed;
 
+	//food関連
+	public GameObject energyBall;
+
+	//attack関連
+	public GameObject attackEffect;
+
 	Rigidbody rigidbody;
 
 	// Use this for initialization
 	void Start () {
+		player_follower = GameObject.Find ("Player/player_follower");
+
 		rigidbody = gameObject.GetComponent<Rigidbody> ();
 		gameObject.GetComponent<Animation> ().Play ("idle");
 		agent = gameObject.GetComponent<NavMeshAgent> ();
@@ -102,24 +109,48 @@ public class zipperScript : MonoBehaviour {
 		agent.SetDestination (pos);
 	}
 */
-	private void beFat(){
-		if (!isTamed) {
-			zipperCountScript.zipperCount (1);
+	public void eatFood(int foodNum){
+		switch (foodNum) {
+		case 0:
+			if (!isTamed) {
+				zipperCountScript.zipperCount (1);
+			}
+			isTamed = true;
+			gameObject.GetComponent<Animation> ().Play ("attack");
+			state = State.tamed;
+			break;
+
+		case 1://ハンバーガー
+			gameObject.GetComponent<Animation> ().Play ("attack");
+			HP += 5;
+			break;
+
+		case 2://dragon fruit
+			gameObject.GetComponent<Animation> ().Play ("attack");
+			Invoke ("fire", 2);
+			break;
 		}
-		isTamed = true;
-		gameObject.GetComponent<Animation>().Play("attack");
-		state = State.tamed;
+
+
+	}
+
+	private void fire(){
+		GameObject fire = Instantiate (energyBall, gameObject.transform.position + new Vector3(0,1,0), Quaternion.identity) as GameObject;
+		//fire.transform.position = 
 	}
 
 
-
+	//敵を攻撃
 	void OnCollisionEnter(Collision col){
 
 		//キノコを食べるアクション
 		if (col.collider.tag == "enemy" && !beDead) {
 			print ("EAT!!");
 			gameObject.GetComponent<Animation>().Play("attack");
-			Destroy (enemies[id].gameObject);
+			GameObject attackEffect2 = Instantiate (attackEffect, gameObject.transform.position, Quaternion.identity) as GameObject;
+			col.collider.SendMessage("Damage");
+			//Destroy (enemies[id].gameObject);
+
 
 		}
 	}

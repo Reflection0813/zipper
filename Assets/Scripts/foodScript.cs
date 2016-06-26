@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class foodScript : MonoBehaviour {
+	private PlayerScript playerScript;
+
 
 	// Use this for initialization
 	void Start () {
-	
+		playerScript = GameObject.Find ("Player").GetComponent<PlayerScript> ();
 	}
 	
 	// Update is called once per frame
@@ -19,14 +21,14 @@ public class foodScript : MonoBehaviour {
 
 
 		if (col.gameObject.tag == "terrain") {
-			Debug.Log ("地面");
-			//Destroy (this.gameObject);
+			Destroy (this.gameObject,2);
 		}
 	}
 
 	void OnTriggerEnter(Collider col){
 		if (col.gameObject.tag == "Zipper") {
-			col.GetComponent<Collider>().SendMessage ("beFat");
+			col.gameObject.GetComponent<zipperScript> ().eatFood (playerScript.foodNum);
+				
 			Destroy (this.gameObject);
 		}
 
