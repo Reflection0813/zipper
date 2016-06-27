@@ -34,6 +34,7 @@ public class zipperScript : MonoBehaviour {
 
 	//attack関連
 	public GameObject attackEffect;
+	private int attackPower = 1;
 
 	Rigidbody rigidbody;
 
@@ -89,7 +90,6 @@ public class zipperScript : MonoBehaviour {
 		case State.attack:
 			decideTargetId ();
 
-			print("id = " + id);
 			if (enemies.Length != 0){
 				if(enemies [id] != null) {
 					agent.SetDestination (enemies [id].transform.position);
@@ -142,13 +142,13 @@ public class zipperScript : MonoBehaviour {
 
 	//敵を攻撃
 	void OnCollisionEnter(Collision col){
-
+		
 		//キノコを食べるアクション
-		if (col.collider.tag == "enemy" && !beDead) {
+		if (col.gameObject.tag == "enemy" && !beDead) {
 			print ("EAT!!");
 			gameObject.GetComponent<Animation>().Play("attack");
 			GameObject attackEffect2 = Instantiate (attackEffect, gameObject.transform.position, Quaternion.identity) as GameObject;
-			col.collider.SendMessage("Damage");
+			col.gameObject.GetComponent<EnemyScript> ().Damage (attackPower);
 			//Destroy (enemies[id].gameObject);
 
 

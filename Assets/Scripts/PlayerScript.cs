@@ -109,6 +109,7 @@ public class PlayerScript: MonoBehaviour {
 			run=10;
 			//stamina -= 0.03f;
 			staminaBar.fillAmount -= 0.003f;
+
 		}
 		else
 		{

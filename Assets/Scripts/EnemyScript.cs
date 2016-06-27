@@ -3,6 +3,9 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
 	Animator animator;
+	//enemyIdentity
+	public int enemyHP;
+
 	//Script
 	zipperScript zipperScript;
 
@@ -22,6 +25,19 @@ public class EnemyScript : MonoBehaviour {
 
 	void Start(){
 		//AudioClip clip = gameObject.GetComponent<AudioSource> ().clip;
+		switch (gameObject.transform.parent.gameObject.tag) {
+		case "sizeS":
+			enemyHP = 1;
+			break;
+		case "sizeM":
+			enemyHP = 5;
+			break;
+		case "sizeL":
+			enemyHP = 20;
+			break;
+		
+		}
+
 
 		player = GameObject.Find ("Player");
 		target = player.transform;
@@ -44,6 +60,14 @@ public class EnemyScript : MonoBehaviour {
 		}
 			//DoPatrol ();
 		//プレイヤーとの距離が一定以下でプレイヤーを追いかける
+
+	}
+
+	public void Damage(int damage){
+		enemyHP -= damage;
+		if (enemyHP <= 0) {
+			Destroy (gameObject);
+		}
 
 	}
 

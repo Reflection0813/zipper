@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\UIScript.cs" />
      <Compile Include="Assets\Scripts\enegyScript.cs" />
      <Compile Include="Assets\Scripts\foodScript.cs" />
+     <Compile Include="Assets\Scripts\particleScript.cs" />
      <Compile Include="Assets\Scripts\partsScript.cs" />
      <Compile Include="Assets\Scripts\rainScript.cs" />
      <Compile Include="Assets\Scripts\zipper\zipperCountScript.cs" />
