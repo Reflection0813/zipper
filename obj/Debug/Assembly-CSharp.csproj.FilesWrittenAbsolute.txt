@@ -35,3 +35,5 @@
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Assembly-UnityScript-firstpass.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/GETween.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/GUIAnimatorFREE.dll

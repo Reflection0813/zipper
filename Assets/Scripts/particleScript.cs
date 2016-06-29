@@ -3,6 +3,8 @@ using System.Collections;
 
 public class particleScript : MonoBehaviour {
 	public GameObject par;
+	public GameObject parts;
+	private bool partsBool;
 
 	// Use this for initialization
 	void Start () {
@@ -11,6 +13,13 @@ public class particleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		gameObject.transform.position = par.transform.position;
+		if (par != null) {
+			gameObject.transform.position = par.transform.position;
+		} else if(!partsBool){
+			partsBool = true;
+			Instantiate (parts, gameObject.transform.position,Quaternion.identity);
+			Destroy (gameObject);
+		}
+
 	}
 }

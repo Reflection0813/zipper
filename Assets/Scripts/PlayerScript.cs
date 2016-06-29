@@ -29,6 +29,11 @@ public class PlayerScript: MonoBehaviour {
 
 
 	void Start(){
+		Sound.LoadBgm ("main", "main");
+		Sound.LoadSe ("throw", "throw");Sound.LoadSe ("select", "select");Sound.LoadSe ("dash_1", "dash_1");
+		Sound.LoadSe ("damaged", "player_damaged");Sound.LoadSe ("death", "player_death");
+		Sound.PlayBgm ("main");Sound.LoadSe ("get", "get");
+
 		animator = gameObject.GetComponent<Animator> ();
 
 		//foodの初期値
@@ -45,6 +50,7 @@ public class PlayerScript: MonoBehaviour {
 		
 		//Zで投げてXで食べてCで変える
 		if (Input.GetKeyDown(KeyCode.Z)) {
+			Sound.PlaySe ("throw");
 			throwFood ();
 		}
 
@@ -53,6 +59,7 @@ public class PlayerScript: MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.C)) {
+			Sound.PlaySe ("select");
 			changeFoodNum ();
 		}
 
@@ -65,6 +72,7 @@ public class PlayerScript: MonoBehaviour {
 
 
 		if (gatheredParts == clearNum) {
+			
 			print ("sucess");
 			SceneManager.LoadScene ("Clear");
 		}
@@ -79,13 +87,17 @@ public class PlayerScript: MonoBehaviour {
 
 	void Damage(){
 		if (!damagedBool) {
+			
 			damagedBool = true;
 			blinkCount = 0;
 			StartCoroutine (Blink ());
 			playerHP--;
 			HPbar.fillAmount -= 0.33f;
 			if (playerHP <= 0) {
+				Sound.PlaySe ("death");
 				SceneManager.LoadScene ("GameOver");
+			} else {
+				Sound.PlaySe ("damaged");
 			}
 		}
 	}
@@ -156,14 +168,20 @@ public class PlayerScript: MonoBehaviour {
 	{
 		//partsに触れたら回収
 		if (hit.gameObject.tag == "Parts") {
-			gatheredParts += 1;
+			Sound.PlaySe ("get");
 			Destroy (hit.gameObject);
+			gatheredParts += 1;
+			print ("gatherd = " + gatheredParts);
+
+			hit.gameObject.GetComponent<partsScript> ().changePartsUIColor ();
 		}
 
 		if (hit.gameObject.tag == "enemy") {
 			Damage ();
 		}
 	}
+
+
 
 
 

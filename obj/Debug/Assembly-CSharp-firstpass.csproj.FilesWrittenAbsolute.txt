@@ -15,3 +15,5 @@
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/ShuyaInada/zipper/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/GETween.dll
+/Users/ShuyaInada/zipper/Temp/bin/Debug/GUIAnimatorFREE.dll

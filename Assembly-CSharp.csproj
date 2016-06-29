@@ -45,14 +45,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo00.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo01.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo02.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo03.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo04.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo05.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo06.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo07.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo08.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_DemoPlaySound.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_OpenOtherScene.cs" />
+     <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo Basic (CSharp)\Scripts\GUIAnimatorFREEDemo.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Demo\DemoScript.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Demo\DemoScript2D.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Prefab\BaseRainScript.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Prefab\RainCollision.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Prefab\RainScript.cs" />
+     <Compile Include="Assets\ImportedAssets\RainMaker\Prefab\RainScript2D.cs" />
+     <Compile Include="Assets\ImportedAssets\effect2\Demo\Scripts\GE_Elementals_Demo.cs" />
      <Compile Include="Assets\ImportedAssets\zipper\demo_scene\GUITest.cs" />
      <Compile Include="Assets\ImportedAssets\zipper\demo_scene\ObjectRotation.cs" />
-     <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
-     <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
-     <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
-     <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
-     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
-     <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
      <Compile Include="Assets\Scripts\Cursorlock.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\EnemySpawner.cs" />
@@ -66,6 +79,11 @@
      <Compile Include="Assets\Scripts\particleScript.cs" />
      <Compile Include="Assets\Scripts\partsScript.cs" />
      <Compile Include="Assets\Scripts\rainScript.cs" />
+     <Compile Include="Assets\Scripts\sound.cs" />
+     <Compile Include="Assets\Scripts\soundManagerScript.cs" />
+     <Compile Include="Assets\Scripts\stage\stageTriggerScript.cs" />
+     <Compile Include="Assets\Scripts\stage\switchScript.cs" />
+     <Compile Include="Assets\Scripts\stage\triggerChildScript.cs" />
      <Compile Include="Assets\Scripts\zipper\zipperCountScript.cs" />
      <Compile Include="Assets\Scripts\zipper\zipperScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -100,7 +118,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
-     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
+     <None Include="Assets\ImportedAssets\RainMaker\Prefab\RainShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ConvertDepth.shader" />
@@ -110,6 +128,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\CreaseApply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ChromaticAberrationShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\ImportedAssets\effect2\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
@@ -134,16 +153,18 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\TwirlEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VortexEffect.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Adaptation.shader" />
+     <None Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrain.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Tonemapper.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAA2.shader" />
-     <None Include="Assets\RainMaker\Readme.txt" />
+     <None Include="Assets\ImportedAssets\RainMaker\Readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrection3DLut.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\EdgeDetectNormals.shader" />
+     <None Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\!How to.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
@@ -163,6 +184,12 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="GETween">
+ <HintPath>/Users/ShuyaInada/zipper/Assets/ImportedAssets/GUI Animator/Common/Plugins/GETween.dll</HintPath>
+ </Reference>
+ <Reference Include="GUIAnimatorFREE">
+ <HintPath>/Users/ShuyaInada/zipper/Assets/ImportedAssets/GUI Animator/GUI Animator FREE/Plugins/GUIAnimatorFREE.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

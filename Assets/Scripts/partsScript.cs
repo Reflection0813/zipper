@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class partsScript : MonoBehaviour {
+	public Image part;
 
-	// Use this for initialization
-	void Start () {
-	
+	public void changePartsUIColor(){
+		part.color = new Color (255, 255, 255);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
