@@ -6,12 +6,15 @@ public class stageTriggerScript : MonoBehaviour {
 	private bool forestBool = false;
 	private bool desertBool = false;
 	private bool snowBool = false;
+	tutorialScript tutorialScript;
 
 	// Use this for initialization
 	void Start () {
 		Sound.LoadBgm ("forest", "theme_forest");
 		Sound.LoadBgm ("desert", "theme_desert");
 		Sound.LoadBgm ("snow", "theme_snow");
+
+		tutorialScript = GameObject.Find ("GameManager").GetComponent<tutorialScript> ();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +26,7 @@ public class stageTriggerScript : MonoBehaviour {
 		print ("enter" + col.gameObject.tag);
 		if (col.gameObject.tag == "Player") {
 			if (gameObject.transform.parent.tag == "forest") {
-				
+				tutorialScript.changeTutorialText ("きのこの森", 3);
 				forestBool = !forestBool;
 				print (forestBool);
 				RainPrefab.SetActive (forestBool);
@@ -38,6 +41,7 @@ public class stageTriggerScript : MonoBehaviour {
 
 			if (gameObject.transform.parent.tag == "Desert") {
 				desertBool = !desertBool;
+				tutorialScript.changeTutorialText ("砂漠", 3);
 				if (desertBool) {
 					
 					Sound.PlayBgm ("desert");
@@ -49,7 +53,7 @@ public class stageTriggerScript : MonoBehaviour {
 
 			if (gameObject.transform.parent.tag == "Snow") {
 				snowBool = !snowBool;
-
+				tutorialScript.changeTutorialText ("スノーマウンテン", 3);
 				if (snowBool) {
 					Sound.PlayBgm ("snow");
 				} else {

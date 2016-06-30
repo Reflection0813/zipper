@@ -18,9 +18,10 @@ public class zipperScript : MonoBehaviour {
 	private float INF = 100000;
 	private GameObject player_follower;
 	private GameObject[] enemies;
-	private float agentToEnemyDistance;
-	private float minDistanceToTarget;
-	private int id;
+	private GameObject[] foods;
+	private float agentToEnemyDistance;private float agentToFoodDistance;
+	private float minDistanceToTarget;private float minDistanceToFood;
+	private int id;private int id_f;
 	NavMeshAgent agent;
 	private enum State
 	{
@@ -32,11 +33,13 @@ public class zipperScript : MonoBehaviour {
 	private bool isTamed;
 
 	private Vector3 roamPosition;
+	private Vector3 roamBase;
 	private float changeTargetSqrDistance = 40f;
 
 	//food関連
 	public GameObject energyBall;
 	public GameObject curedEffect;
+	private bool foodBool = false;
 
 	//attack関連
 	public GameObject attackEffect;
@@ -47,6 +50,7 @@ public class zipperScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player_follower = GameObject.Find ("Player/player_follower");
+		roamBase = gameObject.transform.position;
 
 		//LoadSound
 		Sound.LoadSe ("tame", "zipper_tame");
@@ -105,35 +109,46 @@ public class zipperScript : MonoBehaviour {
 		}
 	}
 
+	public void searchForFood(GameObject food_s){
+		foodBool = true;
+		agent.SetDestination (food_s.transform.position);
+		Invoke ("foodBoolChange", 2);
+	}
 
+	private void foodBoolChange(){
+		foodBool = false;
+	}
+
+	//setDestination
 	private void TargetDecide(){
-		
-		switch (state) {
-		case State.free:
-			if (gameObject.transform.parent.gameObject.tag != "black") {
-				agent.SetDestination (roamPosition);
-			}
-			break;
-		case State.tamed:
-			agent.SetDestination (player_follower.transform.position);
-			break;
-		case State.attack:
-			decideTargetId ();
-
-			if (enemies.Length != 0){
-				if(enemies [id] != null) {
-					agent.SetDestination (enemies [id].transform.position);
+		if (!foodBool) {
+			switch (state) {
+			case State.free:
+				if (gameObject.transform.parent.gameObject.tag != "black") {
+					agent.SetDestination (roamPosition);
 				}
-			}
-			break;
-		}
+				break;
+			case State.tamed:
+				agent.SetDestination (player_follower.transform.position);
+				break;
+			case State.attack:
+				decideTargetId ();
 
+				if (enemies.Length != 0) {
+					if (enemies [id] != null) {
+						agent.SetDestination (enemies [id].transform.position);
+					}
+				}
+				break;
+			}
+		}
 	}
 
 	public void eatFood(int foodNum){
 		switch (foodNum) {
 		case 0:
 			if (!isTamed) {
+				agent.speed = 8;
 				Sound.PlaySe ("tame");
 				zipperCountScript.zipperCount (1);
 				GameObject.Find ("Canvas/zipperHP/" + zipperCountScript.numberOfTamedZipper).SetActive (true);
@@ -182,12 +197,15 @@ public class zipperScript : MonoBehaviour {
 
 	//敵を攻撃
 	void OnCollisionEnter(Collision col){
-		
+
+
+
 		//キノコを食べるアクション
-		if (col.gameObject.tag == "enemy" && !beDead) {
+		if (col.gameObject.tag == "enemy" && !beDead && isTamed) {
 			Sound.PlaySe ("attack");
 			gameObject.GetComponent<Animation>().Play("attack");Invoke("beIdle",2);
-			 Instantiate (attackEffect, gameObject.transform.position, Quaternion.identity);
+			GameObject attackEffect_2 = Instantiate (attackEffect, gameObject.transform.position, Quaternion.identity) as GameObject;
+			Destroy (attackEffect_2,2);
 			col.gameObject.GetComponent<EnemyScript> ().Damage (attackPower);
 			//Destroy (enemies[id].gameObject);
 
@@ -197,9 +215,10 @@ public class zipperScript : MonoBehaviour {
 
 	private Vector3 GetRandomPositionOnLevel(){
 		float levelSize = 30f;
-		return new Vector3(gameObject.transform.position.x + Random.Range(-levelSize,levelSize), 0,gameObject.transform.position.z + Random.Range(-levelSize,levelSize));
+		return new Vector3(roamBase.x + Random.Range(-levelSize,levelSize), 0,roamBase.z + Random.Range(-levelSize,levelSize));
 	
 	}
+
 
 
 
@@ -225,7 +244,6 @@ public class zipperScript : MonoBehaviour {
 		}
 
 	}
-
 
 
 

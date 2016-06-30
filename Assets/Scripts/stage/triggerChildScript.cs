@@ -11,7 +11,13 @@ public class triggerChildScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider)
 	{
-		parent.SendMessage("RedirectedOnTriggerEnter", collider);
+		if(collider.gameObject.tag == "Player"){
+			if (gameObject.tag == "area") {
+				parent.SendMessage ("RedirectedOnTriggerEnter", collider);
+			} else {
+				parent.GetComponent<switchManagerScript> ().nazotoki (gameObject.tag);
+			}
+		}
 	}
 
 }

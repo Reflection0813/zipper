@@ -4,6 +4,7 @@ using System.Collections;
 
 public class UIScript : MonoBehaviour {
 	public Image[] foodUI;
+	public Text[] foodTX;
 
 	// Use this for initialization
 	public void changeFoodUI(int foodNum){
@@ -20,6 +21,11 @@ public class UIScript : MonoBehaviour {
 			
 			
 		}
+
+	}
+
+	public void changeFoodTX(int foodNum,int foodLeft){
+		foodTX [foodNum].text = foodLeft.ToString ();
 
 	}
 }

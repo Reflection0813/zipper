@@ -12,11 +12,6 @@ public class RetryManager : MonoBehaviour {
 
 	// リトライメソッド
 	public void Retry(){
-		if (ScoreManager.instance) {
-			// 敵を倒した回数をゼロにリセットする 
-			ScoreManager.instance.enemyCount = 0;
-		}
-		// メインシーンに移動する
-		Application.LoadLevel("Main");
+		Application.LoadLevel("TITLE");
 	}
 }

@@ -45,6 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
+     <Compile Include="Assets\ImportedAssets\Chibi Mummy\Scripts\anims_controls.cs" />
+     <Compile Include="Assets\ImportedAssets\Chibi Mummy\Scripts\control_script.cs" />
      <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo00.cs" />
      <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo01.cs" />
      <Compile Include="Assets\ImportedAssets\GUI Animator\GUI Animator FREE\Demo (CSharp)\Scripts\GA_FREE_Demo02.cs" />
@@ -84,6 +87,10 @@
      <Compile Include="Assets\Scripts\stage\stageTriggerScript.cs" />
      <Compile Include="Assets\Scripts\stage\switchScript.cs" />
      <Compile Include="Assets\Scripts\stage\triggerChildScript.cs" />
+     <Compile Include="Assets\Scripts\switchManagerScript.cs" />
+     <Compile Include="Assets\Scripts\titleScript.cs" />
+     <Compile Include="Assets\Scripts\tutorialScript.cs" />
+     <Compile Include="Assets\Scripts\zipper\foodTrigger.cs" />
      <Compile Include="Assets\Scripts\zipper\zipperCountScript.cs" />
      <Compile Include="Assets\Scripts\zipper\zipperScript.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
@@ -104,6 +111,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+     <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
@@ -116,6 +124,7 @@
      <None Include="Assets\ImportedAssets\zipper\chr\Materials\double.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\read me.txt" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\ImportedAssets\RainMaker\Prefab\RainShader.shader" />
@@ -144,6 +153,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+     <None Include="Assets\ImportedAssets\Chibi Mummy\readme.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\MotionBlurClear.shader" />
      <None Include="Assets\ImportedAssets\zipper\chr\Materials\single.shader" />
@@ -168,6 +178,7 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
+     <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
      <None Include="Assets\ImportedAssets\zipper\readme.txt" />
      <None Include="Assets\ImportedAssets\character\ReadMe.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
