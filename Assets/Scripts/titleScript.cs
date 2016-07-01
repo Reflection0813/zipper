@@ -11,7 +11,7 @@ public class titleScript : MonoBehaviour {
 		Sound.LoadBgm ("main", "main");
 		Sound.PlayBgm ("main");
 		title.enabled = false;
-		Invoke ("titleFunc", 32);
+		Invoke ("titleFunc", 35);
 	}
 	
 	// Update is called once per frame
